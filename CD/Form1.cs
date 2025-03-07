@@ -1,6 +1,7 @@
 ﻿using CD.Constans;
 using CD.Service;
 using CD.Services;
+
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -33,7 +34,7 @@ namespace CD
 
             int[] arrValues = fileReaderWriter.Read(files[0]);
 
-            int sum = alghoritm.GetSumBites(arrValues);
+            double sum = alghoritm.AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
 
             errorLb.Text = sum.ToString();
         }
@@ -55,10 +56,6 @@ namespace CD
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {

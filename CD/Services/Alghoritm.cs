@@ -4,16 +4,18 @@ namespace CD.Service
 {
     internal class Alghoritm
     {
-        internal int GetSumBites(int [] input)
+        internal double AverageByBlockSize(int blockSize, int[] input)
         {
             int sum = 0;
 
-            for (int i = 0; i < input.Length; i++)
+            double average = 0;
+
+            for (int i = 0; i < blockSize; i++)
             {
                 sum += BitCount(input[i]);
             }
 
-            return sum;
+            return average = sum / (double)blockSize;
         }
 
         private int BitCount(int val)
