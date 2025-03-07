@@ -24,5 +24,24 @@ namespace CD
         {
 
         }
+
+        private void cdInFolderBtn_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                pathLb.Text = dialog.SelectedPath;
+            }
+            else
+            {
+                pathLb.Text = "Folder is not selected";
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
