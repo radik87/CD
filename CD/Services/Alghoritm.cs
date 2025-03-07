@@ -11,6 +11,11 @@ namespace CD.Service
                 return 1;
             }
 
+            if(val < 0)
+            {
+                val *= -1;
+            }
+
             int res = (int)Math.Log(val, 2.0) + 1;
 
             return res;
