@@ -4,14 +4,26 @@ namespace CD.Service
 {
     internal class Alghoritm
     {
-        internal static int BitCount(int val)
+        internal int GetSumBites(int [] input)
         {
-            if(val == 0)
+            int sum = 0;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                sum += BitCount(input[i]);
+            }
+
+            return sum;
+        }
+
+        private int BitCount(int val)
+        {
+            if (val == 0)
             {
                 return 1;
             }
 
-            if(val < 0)
+            if (val < 0)
             {
                 val *= -1;
             }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cdInFolderBtn = new System.Windows.Forms.Button();
+            this.CdInFolderBtn = new System.Windows.Forms.Button();
             this.displayPathBtn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -37,22 +37,22 @@
             this.Reading = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.cancelBtn = new System.Windows.Forms.Button();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.ExecuteBtn = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.errorLb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cdInFolderBtn
+            // CdInFolderBtn
             // 
-            this.cdInFolderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cdInFolderBtn.Location = new System.Drawing.Point(17, 60);
-            this.cdInFolderBtn.Name = "cdInFolderBtn";
-            this.cdInFolderBtn.Size = new System.Drawing.Size(174, 52);
-            this.cdInFolderBtn.TabIndex = 0;
-            this.cdInFolderBtn.Text = "CD in folder";
-            this.cdInFolderBtn.UseVisualStyleBackColor = true;
-            this.cdInFolderBtn.Click += new System.EventHandler(this.cdInFolderBtn_Click);
+            this.CdInFolderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CdInFolderBtn.Location = new System.Drawing.Point(17, 60);
+            this.CdInFolderBtn.Name = "CdInFolderBtn";
+            this.CdInFolderBtn.Size = new System.Drawing.Size(174, 52);
+            this.CdInFolderBtn.TabIndex = 0;
+            this.CdInFolderBtn.Text = "CD in folder";
+            this.CdInFolderBtn.UseVisualStyleBackColor = true;
+            this.CdInFolderBtn.Click += new System.EventHandler(this.CdInFolderBtn_Click);
             // 
             // displayPathBtn
             // 
@@ -63,7 +63,7 @@
             this.displayPathBtn.TabIndex = 1;
             this.displayPathBtn.Text = "Display path to selected folder";
             this.displayPathBtn.UseVisualStyleBackColor = true;
-            this.displayPathBtn.Click += new System.EventHandler(this.displayPathBtn_Click);
+            this.displayPathBtn.Click += new System.EventHandler(this.DisplayPathBtn_Click);
             // 
             // checkBox1
             // 
@@ -133,15 +133,16 @@
             this.progressBar1.Size = new System.Drawing.Size(779, 41);
             this.progressBar1.TabIndex = 9;
             // 
-            // cancelBtn
+            // CancelBtn
             // 
-            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cancelBtn.Location = new System.Drawing.Point(17, 523);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(174, 52);
-            this.cancelBtn.TabIndex = 10;
-            this.cancelBtn.Text = "Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelBtn.Location = new System.Drawing.Point(17, 523);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(174, 52);
+            this.CancelBtn.TabIndex = 10;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // ExecuteBtn
             // 
@@ -171,7 +172,7 @@
             this.ClientSize = new System.Drawing.Size(813, 587);
             this.Controls.Add(this.errorLb);
             this.Controls.Add(this.ExecuteBtn);
-            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Reading);
@@ -180,7 +181,7 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.displayPathBtn);
-            this.Controls.Add(this.cdInFolderBtn);
+            this.Controls.Add(this.CdInFolderBtn);
             this.MaximizeBox = false;
             this.Name = "CD_Delta";
             this.Text = "CD-Delta";
@@ -192,7 +193,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cdInFolderBtn;
+        private System.Windows.Forms.Button CdInFolderBtn;
         private System.Windows.Forms.Button displayPathBtn;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
@@ -201,7 +202,7 @@
         private System.Windows.Forms.Label Reading;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button ExecuteBtn;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label errorLb;

@@ -1,6 +1,6 @@
 ﻿using CD.Constans;
 using CD.Service;
-
+using CD.Services;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -18,9 +18,11 @@ namespace CD
         {
 
         }
-        private void cdInFolderBtn_Click(object sender, EventArgs e)
+        private void CdInFolderBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
+            FileReaderWriter fileReaderWriter = new FileReaderWriter();
+            Alghoritm alghoritm = new Alghoritm();
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -28,9 +30,15 @@ namespace CD
             }
 
             var files = Directory.GetFiles(Folder.Current, "*.txt");
+
+            int[] arrValues = fileReaderWriter.Read(files[0]);
+
+            int sum = alghoritm.GetSumBites(arrValues);
+
+            errorLb.Text = sum.ToString();
         }
 
-        private void displayPathBtn_Click(object sender, EventArgs e)
+        private void DisplayPathBtn_Click(object sender, EventArgs e)
         {
             displayPathBtn.Text = Folder.Current;
         }
@@ -45,18 +53,14 @@ namespace CD
             {
                 Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
             }
-
-            if (InputTxtBox.Text != null)
-            {
-                int value = Convert.ToInt32(InputTxtBox.Text);
-
-                int bits = Alghoritm.BitCount(value);
-
-                errorLb.Text = bits.ToString();
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
         {
 
         }
