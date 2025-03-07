@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CD.Constans;
+using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace CD
@@ -15,33 +17,35 @@ namespace CD
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cdInFolderBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
+
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                pathLb.Text = dialog.SelectedPath;
-            }
-            else
-            {
-                pathLb.Text = "Folder is not selected";
+                Folder.Current = dialog.SelectedPath;
             }
 
+            var files = Directory.GetFiles(Folder.Current, "*.txt");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void displayPathBtn_Click(object sender, EventArgs e)
         {
+            displayPathBtn.Text = Folder.Current;
+        }
 
+        private void ExecuteBtn_Click(object sender, EventArgs e)
+        {
+            string path = Folder.Current;
+
+            string parent = Path.GetFullPath(Path.Combine(path, @"..\"));
+
+            bool exists = Directory.Exists(string.Concat(parent, Folder.CD_Out));
+
+            if (!exists)
+            {
+               Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
+            }
         }
     }
 }

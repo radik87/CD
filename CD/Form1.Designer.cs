@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.cdInFolderBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.displayPathBtn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.blockSizeLb = new System.Windows.Forms.Label();
@@ -38,9 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.executeBtn = new System.Windows.Forms.Button();
+            this.ExecuteBtn = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.pathLb = new System.Windows.Forms.Label();
+            this.errorLb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cdInFolderBtn
@@ -54,16 +54,16 @@
             this.cdInFolderBtn.UseVisualStyleBackColor = true;
             this.cdInFolderBtn.Click += new System.EventHandler(this.cdInFolderBtn_Click);
             // 
-            // button2
+            // displayPathBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(221, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(575, 52);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Display path to selected folder";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.displayPathBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.displayPathBtn.Location = new System.Drawing.Point(221, 60);
+            this.displayPathBtn.Name = "displayPathBtn";
+            this.displayPathBtn.Size = new System.Drawing.Size(575, 52);
+            this.displayPathBtn.TabIndex = 1;
+            this.displayPathBtn.Text = "Display path to selected folder";
+            this.displayPathBtn.UseVisualStyleBackColor = true;
+            this.displayPathBtn.Click += new System.EventHandler(this.displayPathBtn_Click);
             // 
             // checkBox1
             // 
@@ -114,7 +114,6 @@
             this.Reading.Size = new System.Drawing.Size(200, 29);
             this.Reading.TabIndex = 7;
             this.Reading.Text = "00.00.00 Reading";
-            this.Reading.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -143,32 +142,34 @@
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
             // 
-            // executeBtn
+            // ExecuteBtn
             // 
-            this.executeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.executeBtn.Location = new System.Drawing.Point(614, 523);
-            this.executeBtn.Name = "executeBtn";
-            this.executeBtn.Size = new System.Drawing.Size(182, 52);
-            this.executeBtn.TabIndex = 11;
-            this.executeBtn.Text = "Execute";
-            this.executeBtn.UseVisualStyleBackColor = true;
+            this.ExecuteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExecuteBtn.Location = new System.Drawing.Point(614, 523);
+            this.ExecuteBtn.Name = "ExecuteBtn";
+            this.ExecuteBtn.Size = new System.Drawing.Size(182, 52);
+            this.ExecuteBtn.TabIndex = 11;
+            this.ExecuteBtn.Text = "Execute";
+            this.ExecuteBtn.UseVisualStyleBackColor = true;
+            this.ExecuteBtn.Click += new System.EventHandler(this.ExecuteBtn_Click);
             // 
-            // pathLb
+            // errorLb
             // 
-            this.pathLb.AutoSize = true;
-            this.pathLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pathLb.Location = new System.Drawing.Point(440, 15);
-            this.pathLb.Name = "pathLb";
-            this.pathLb.Size = new System.Drawing.Size(0, 29);
-            this.pathLb.TabIndex = 12;
+            this.errorLb.AutoSize = true;
+            this.errorLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.errorLb.ForeColor = System.Drawing.Color.Red;
+            this.errorLb.Location = new System.Drawing.Point(440, 15);
+            this.errorLb.Name = "errorLb";
+            this.errorLb.Size = new System.Drawing.Size(0, 29);
+            this.errorLb.TabIndex = 12;
             // 
             // CD_Delta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 587);
-            this.Controls.Add(this.pathLb);
-            this.Controls.Add(this.executeBtn);
+            this.Controls.Add(this.errorLb);
+            this.Controls.Add(this.ExecuteBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label4);
@@ -177,7 +178,7 @@
             this.Controls.Add(this.blockSizeLb);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.displayPathBtn);
             this.Controls.Add(this.cdInFolderBtn);
             this.MaximizeBox = false;
             this.Name = "CD_Delta";
@@ -191,7 +192,7 @@
         #endregion
 
         private System.Windows.Forms.Button cdInFolderBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button displayPathBtn;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label blockSizeLb;
@@ -200,9 +201,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button executeBtn;
+        private System.Windows.Forms.Button ExecuteBtn;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Label pathLb;
+        private System.Windows.Forms.Label errorLb;
     }
 }
 
