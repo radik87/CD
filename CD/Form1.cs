@@ -1,4 +1,6 @@
 ﻿using CD.Constans;
+using CD.Service;
+
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -16,7 +18,6 @@ namespace CD
         {
 
         }
-
         private void cdInFolderBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -36,16 +37,28 @@ namespace CD
 
         private void ExecuteBtn_Click(object sender, EventArgs e)
         {
-            string path = Folder.Current;
-
-            string parent = Path.GetFullPath(Path.Combine(path, @"..\"));
+            string parent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
 
             bool exists = Directory.Exists(string.Concat(parent, Folder.CD_Out));
 
             if (!exists)
             {
-               Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
+                Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
             }
+
+            if (InputTxtBox.Text != null)
+            {
+                int value = Convert.ToInt32(InputTxtBox.Text);
+
+                int bits = Alghoritm.BitCount(value);
+
+                errorLb.Text = bits.ToString();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

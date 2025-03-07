@@ -33,7 +33,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.blockSizeLb = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InputTxtBox = new System.Windows.Forms.TextBox();
             this.Reading = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -97,13 +97,14 @@
             this.blockSizeLb.TabIndex = 4;
             this.blockSizeLb.Text = "Block Size";
             // 
-            // textBox1
+            // InputTxtBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(221, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 35);
-            this.textBox1.TabIndex = 6;
+            this.InputTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InputTxtBox.Location = new System.Drawing.Point(221, 9);
+            this.InputTxtBox.Name = "InputTxtBox";
+            this.InputTxtBox.Size = new System.Drawing.Size(156, 35);
+            this.InputTxtBox.TabIndex = 6;
+            this.InputTxtBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Reading
             // 
@@ -174,7 +175,7 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Reading);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InputTxtBox);
             this.Controls.Add(this.blockSizeLb);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -196,7 +197,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label blockSizeLb;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InputTxtBox;
         private System.Windows.Forms.Label Reading;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar progressBar1;
