@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev4\\CD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev4\\CD\\cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev4\\cd\\cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\dev4\\CD\\CD\\Form1.cs",
+              "RelativeDocumentMoniker": "CD\\Form1.cs",
+              "ToolTip": "C:\\dev4\\CD\\CD\\Form1.cs",
+              "RelativeToolTip": "CD\\Form1.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:13:07.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\dev4\\CD\\CD\\Form1.cs",
+              "RelativeDocumentMoniker": "CD\\Form1.cs",
+              "ToolTip": "C:\\dev4\\CD\\CD\\Form1.cs [Design]",
+              "RelativeToolTip": "CD\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:12:30.136Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
