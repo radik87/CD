@@ -7,7 +7,6 @@ namespace CD.Service
         internal double AverageByBlockSize(int blockSize, int[] input)
         {
             int sum = 0;
-
             double average = 0;
 
             for (int i = 0; i < blockSize; i++)
@@ -18,21 +17,21 @@ namespace CD.Service
             return average = sum / (double)blockSize;
         }
 
-        private int BitCount(int val)
+        private int BitCount(int number)
         {
-            if (val == 0)
+            if (number == 0)
             {
                 return 1;
             }
 
-            if (val < 0)
+            if (number < 0)
             {
-                val *= -1;
+                number *= -1;
             }
 
-            int res = (int)Math.Log(val, 2.0) + 1;
+            int result = (int)Math.Log(number, 2.0) + 1;
 
-            return res;
+            return result;
         }
     }
 }

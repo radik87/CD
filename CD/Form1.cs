@@ -1,7 +1,6 @@
 ﻿using CD.Constans;
 using CD.Service;
 using CD.Services;
-
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -22,21 +21,11 @@ namespace CD
         private void CdInFolderBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
-            FileReaderWriter fileReaderWriter = new FileReaderWriter();
-            Alghoritm alghoritm = new Alghoritm();
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 Folder.Current = dialog.SelectedPath;
             }
-
-            var files = Directory.GetFiles(Folder.Current, "*.txt");
-
-            int[] arrValues = fileReaderWriter.Read(files[0]);
-
-            double sum = alghoritm.AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
-
-            errorLb.Text = sum.ToString();
         }
 
         private void DisplayPathBtn_Click(object sender, EventArgs e)
@@ -46,6 +35,8 @@ namespace CD
 
         private void ExecuteBtn_Click(object sender, EventArgs e)
         {
+            double average = default;
+
             string parent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
 
             bool exists = Directory.Exists(string.Concat(parent, Folder.CD_Out));
@@ -54,6 +45,22 @@ namespace CD
             {
                 Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
             }
+
+            var files = FileReaderWriter.GetFile(Folder.Current, "*.txt");
+
+            int[] arrValues = new FileReaderWriter().Read(files[0]);
+
+            try
+            {
+                average = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
+            }
+
+            catch (Exception ex)
+            {
+                errorLb.Text = ex.Message;
+            }
+
+            errorLb.Text = average.ToString();
         }
 
 
