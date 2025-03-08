@@ -6,7 +6,7 @@ namespace CD.Services
 {
     internal class FileReaderWriter
     {
-        internal static string[] GetFile(string path, string extension)
+        internal string[] GetFile(string path, string extension)
         {
             return Directory.GetFiles(Folder.Current, extension);
         }
@@ -23,7 +23,6 @@ namespace CD.Services
             using (StreamWriter writer = new StreamWriter(string.Concat(path, @"\13-out.txt")))
             {
                 writer.Write(text);
-                //writer.WriteLine();
             }
         }
     }

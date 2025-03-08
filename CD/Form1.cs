@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CD
@@ -45,16 +46,17 @@ namespace CD
 
             FileReaderWriter fileReaderWriter = new FileReaderWriter();
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
-
+            List<Task> tasks = new List<Task>();
+            Folder folder = new Folder();
             Stopwatch readingTime = new Stopwatch();
             Stopwatch algTime = new Stopwatch();
 
             try
             {
-                Folder.ParentFormCurrent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
-                Folder.CD_Out = string.Concat(Folder.ParentFormCurrent, "CD-out");
+                folder.ParentFormCurrent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
+                folder.CdOut = string.Concat(folder.ParentFormCurrent, "CD-out");
 
-                List<string> filesNames = FileReaderWriter.GetFile(Folder.Current, "*.txt").ToList();
+                List<string> filesNames = fileReaderWriter.GetFile(Folder.Current, "*.txt").ToList();
 
                 foreach (string filename in filesNames)
                 {
@@ -71,17 +73,16 @@ namespace CD
 
                 if (WithoutCdOutCheckB.Checked)
                 {
-                    if (Directory.Exists(Folder.CD_Out))
+                    if (Directory.Exists(folder.CdOut))
                     {
-                        Array.ForEach(Directory.GetFiles(Folder.CD_Out), File.Delete);
-                        Directory.Delete(Folder.CD_Out);
+                        Array.ForEach(Directory.GetFiles(folder.CdOut), File.Delete);
+                        Directory.Delete(folder.CdOut);
                     }
                 }
                 else
                 {
-                    Directory.CreateDirectory(Folder.CD_Out);
-
-                    fileReaderWriter.Write(average, Folder.CD_Out);
+                    Directory.CreateDirectory(folder.CdOut);
+                    fileReaderWriter.Write(average, folder.CdOut);
                 }
 
                 progress.ProgressChanged += (o, report) =>
