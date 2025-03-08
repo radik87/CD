@@ -2,6 +2,6 @@
 {
     internal class ProgressReport
     {
-        public int PercentCompelete { get; set; }
+        internal int PercentCompelete { get; set; }
     }
 }

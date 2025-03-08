@@ -1,11 +1,11 @@
 ﻿using CD.Constans;
 using CD.Service;
 using CD.Services;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CD
@@ -21,21 +21,7 @@ namespace CD
         {
 
         }
-        private Task ProgresData(List<string> list, IProgress<ProgressReport> progress)
-        {
-            int index = 1;
-            int totalProgress = list.Count;
-            ProgressReport progressReport = new ProgressReport();
-            return Task.Run(() =>
-            {
-                for (int i = 0; i < totalProgress; i++)
-                {
-                    progressReport.PercentCompelete = index++ * 100 / totalProgress;
-                    progress.Report(progressReport);
-                    Thread.Sleep(10);
-                }
-            });
-        }
+
         private void CdInFolderBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -57,12 +43,13 @@ namespace CD
             double average = default;
 
             List<string> list = new List<string>();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 1; i++)
             {
                 list.Add(i.ToString());
             }
 
-            var progress = new Progress<ProgressReport>();
+            Progress<ProgressReport> progress = new Progress<ProgressReport>();
+
             progress.ProgressChanged += (o, report) =>
             {
                 PersentLb.Text = string.Format("{0} %", report.PercentCompelete);
@@ -70,7 +57,7 @@ namespace CD
                 ProgressBarC.Update();
             };
 
-            await ProgresData(list, progress);
+            await new ProgressBar().ProgresData(list, progress);
 
             try
             {
@@ -84,7 +71,7 @@ namespace CD
                     Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
                 }
 
-                var files = FileReaderWriter.GetFile(Folder.Current, "*.txt");
+                List<string> files = FileReaderWriter.GetFile(Folder.Current, "*.txt").ToList();
 
                 int[] arrValues = new FileReaderWriter().Read(files[0]);
 

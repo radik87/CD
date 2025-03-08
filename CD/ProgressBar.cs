@@ -1,0 +1,26 @@
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
+using System.Threading;
+
+namespace CD
+{
+    internal class ProgressBar
+    {
+        internal Task ProgresData(List<string> list, IProgress<ProgressReport> progress)
+        {
+            int index = 1;
+            int totalProgress = list.Count;
+            ProgressReport progressReport = new ProgressReport();
+            return Task.Run(() =>
+            {
+                for (int i = 0; i < totalProgress; i++)
+                {
+                    progressReport.PercentCompelete = index++ * 100 / totalProgress;
+                    progress.Report(progressReport);
+                    //Thread.Sleep(10);
+                }
+            });
+        }
+    }
+}

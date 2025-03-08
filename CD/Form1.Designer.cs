@@ -179,7 +179,7 @@
             // 
             this.PersentLb.AutoSize = true;
             this.PersentLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PersentLb.Location = new System.Drawing.Point(748, 400);
+            this.PersentLb.Location = new System.Drawing.Point(724, 400);
             this.PersentLb.Name = "PersentLb";
             this.PersentLb.Size = new System.Drawing.Size(48, 29);
             this.PersentLb.TabIndex = 14;
