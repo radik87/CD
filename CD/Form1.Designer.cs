@@ -36,7 +36,7 @@
             this.BlockSizeTxtBox = new System.Windows.Forms.TextBox();
             this.Reading = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.ProgressBarC = new System.Windows.Forms.ProgressBar();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.ExecuteBtn = new System.Windows.Forms.Button();
             this.ErrorLb = new System.Windows.Forms.Label();
@@ -126,12 +126,12 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "00.00.00 Alghoritm";
             // 
-            // progressBar1
+            // ProgressBarC
             // 
-            this.progressBar1.Location = new System.Drawing.Point(17, 448);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(779, 41);
-            this.progressBar1.TabIndex = 9;
+            this.ProgressBarC.Location = new System.Drawing.Point(17, 448);
+            this.ProgressBarC.Name = "ProgressBarC";
+            this.ProgressBarC.Size = new System.Drawing.Size(779, 41);
+            this.ProgressBarC.TabIndex = 9;
             // 
             // CancelBtn
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.ErrorLb);
             this.Controls.Add(this.ExecuteBtn);
             this.Controls.Add(this.CancelBtn);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.ProgressBarC);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Reading);
             this.Controls.Add(this.BlockSizeTxtBox);
@@ -225,7 +225,7 @@
         private System.Windows.Forms.TextBox BlockSizeTxtBox;
         private System.Windows.Forms.Label Reading;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar ProgressBarC;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button ExecuteBtn;
         private System.Windows.Forms.Label ErrorLb;

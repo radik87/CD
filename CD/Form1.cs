@@ -1,10 +1,11 @@
 ﻿using CD.Constans;
 using CD.Service;
 using CD.Services;
-
 using System;
-using System.Diagnostics;
+using System.Collections.Generic;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CD
@@ -19,6 +20,21 @@ namespace CD
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        private Task ProgresData(List<string> list, IProgress<ProgressReport> progress)
+        {
+            int index = 1;
+            int totalProgress = list.Count;
+            ProgressReport progressReport = new ProgressReport();
+            return Task.Run(() =>
+            {
+                for (int i = 0; i < totalProgress; i++)
+                {
+                    progressReport.PercentCompelete = index++ * 100 / totalProgress;
+                    progress.Report(progressReport);
+                    Thread.Sleep(10);
+                }
+            });
         }
         private void CdInFolderBtn_Click(object sender, EventArgs e)
         {
@@ -35,10 +51,26 @@ namespace CD
             displayPathBtn.Text = Folder.Current;
         }
 
-        private void ExecuteBtn_Click(object sender, EventArgs e)
+        private async void ExecuteBtn_Click(object sender, EventArgs e)
         {
             ErrorLb.Text = string.Empty;
             double average = default;
+
+            List<string> list = new List<string>();
+            for (int i = 0; i < 1000; i++)
+            {
+                list.Add(i.ToString());
+            }
+
+            var progress = new Progress<ProgressReport>();
+            progress.ProgressChanged += (o, report) =>
+            {
+                PersentLb.Text = string.Format("{0} %", report.PercentCompelete);
+                ProgressBarC.Value = report.PercentCompelete;
+                ProgressBarC.Update();
+            };
+
+            await ProgresData(list, progress);
 
             try
             {
@@ -69,9 +101,9 @@ namespace CD
                 MessageBox.Show("STATISTICA SUKA");
             }
 
-            if (!StatsCheckBox.Checked)
+            else
             {
-                MessageBox.Show("calculation completed");
+                MessageBox.Show("Calculation completed");
             }
 
             InfoLb.Text = average.ToString();
