@@ -17,6 +17,7 @@ namespace CD.Service
             return average = sum / (double)blockSize;
         }
 
+
         private int BitCount(int number)
         {
             if (number == 0)

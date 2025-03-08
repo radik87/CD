@@ -1,9 +1,10 @@
 ﻿using CD.Constans;
+using CD.Constants_Models;
 using CD.Service;
 using CD.Services;
-
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -42,40 +43,55 @@ namespace CD
             ErrorLb.Text = string.Empty;
             double average = default;
 
-            List<string> list = new List<string>();
-            for (int i = 0; i < 1; i++)
-            {
-                list.Add(i.ToString());
-            }
-
+            FileReaderWriter fileReaderWriter = new FileReaderWriter();
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
 
-            progress.ProgressChanged += (o, report) =>
-            {
-                PersentLb.Text = string.Format("{0} %", report.PercentCompelete);
-                ProgressBarC.Value = report.PercentCompelete;
-                ProgressBarC.Update();
-            };
-
-            await new ProgressBar().ProgresData(list, progress);
+            Stopwatch readingTime = new Stopwatch();
+            Stopwatch algTime = new Stopwatch();
 
             try
             {
+                Folder.ParentFormCurrent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
+                Folder.CD_Out = string.Concat(Folder.ParentFormCurrent, "CD-out");
 
-                string parent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
+                List<string> filesNames = FileReaderWriter.GetFile(Folder.Current, "*.txt").ToList();
 
-                bool exists = Directory.Exists(string.Concat(parent, Folder.CD_Out));
-
-                if (!exists)
+                foreach (string filename in filesNames)
                 {
-                    Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
+                    readingTime.Start();
+                    int[] arrValues = fileReaderWriter.Read(filename);
+                    readingTime.Stop();
+                    TotalTime.Reading += readingTime.Elapsed;
+
+                    algTime.Start();
+                    average = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
+                    algTime.Stop();
+                    TotalTime.Alghoritm += algTime.Elapsed;
                 }
 
-                List<string> files = FileReaderWriter.GetFile(Folder.Current, "*.txt").ToList();
+                if (WithoutCdOutCheckB.Checked)
+                {
+                    if (Directory.Exists(Folder.CD_Out))
+                    {
+                        Array.ForEach(Directory.GetFiles(Folder.CD_Out), File.Delete);
+                        Directory.Delete(Folder.CD_Out);
+                    }
+                }
+                else
+                {
+                    Directory.CreateDirectory(Folder.CD_Out);
 
-                int[] arrValues = new FileReaderWriter().Read(files[0]);
+                    fileReaderWriter.Write(average, Folder.CD_Out);
+                }
 
-                average = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
+                progress.ProgressChanged += (o, report) =>
+                {
+                    PersentLb.Text = string.Format("{0} %", report.PercentCompelete);
+                    ProgressBarC.Value = report.PercentCompelete;
+                    ProgressBarC.Update();
+                };
+
+                await new ProgressBar().ProgresData(filesNames, progress);
             }
 
             catch (Exception ex)
@@ -95,8 +111,9 @@ namespace CD
 
             InfoLb.Text = average.ToString();
 
+            ReadingTimeLb.Text = string.Concat(nameof(TotalTime.Reading )+ ": ", TotalTime.Reading.ToString(TotalTime.Format));
+            AlgTimeLb.Text = string.Concat(nameof(TotalTime.Alghoritm) + ": ", TotalTime.Alghoritm.ToString(TotalTime.Format));
         }
-
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {

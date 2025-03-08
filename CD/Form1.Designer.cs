@@ -30,12 +30,12 @@
         {
             this.CdInFolderBtn = new System.Windows.Forms.Button();
             this.displayPathBtn = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.WithoutCdOutCheckB = new System.Windows.Forms.CheckBox();
             this.StatsCheckBox = new System.Windows.Forms.CheckBox();
             this.blockSizeLb = new System.Windows.Forms.Label();
             this.BlockSizeTxtBox = new System.Windows.Forms.TextBox();
-            this.Reading = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.ReadingTimeLb = new System.Windows.Forms.Label();
+            this.AlgTimeLb = new System.Windows.Forms.Label();
             this.ProgressBarC = new System.Windows.Forms.ProgressBar();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.ExecuteBtn = new System.Windows.Forms.Button();
@@ -66,16 +66,16 @@
             this.displayPathBtn.UseVisualStyleBackColor = true;
             this.displayPathBtn.Click += new System.EventHandler(this.DisplayPathBtn_Click);
             // 
-            // checkBox1
+            // WithoutCdOutCheckB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(17, 142);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(268, 33);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Without folder CD-out";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.WithoutCdOutCheckB.AutoSize = true;
+            this.WithoutCdOutCheckB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WithoutCdOutCheckB.Location = new System.Drawing.Point(17, 142);
+            this.WithoutCdOutCheckB.Name = "WithoutCdOutCheckB";
+            this.WithoutCdOutCheckB.Size = new System.Drawing.Size(268, 33);
+            this.WithoutCdOutCheckB.TabIndex = 2;
+            this.WithoutCdOutCheckB.Text = "Without folder CD-out";
+            this.WithoutCdOutCheckB.UseVisualStyleBackColor = true;
             // 
             // StatsCheckBox
             // 
@@ -92,7 +92,7 @@
             // 
             this.blockSizeLb.AutoSize = true;
             this.blockSizeLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.blockSizeLb.Location = new System.Drawing.Point(12, 9);
+            this.blockSizeLb.Location = new System.Drawing.Point(23, 15);
             this.blockSizeLb.Name = "blockSizeLb";
             this.blockSizeLb.Size = new System.Drawing.Size(126, 29);
             this.blockSizeLb.TabIndex = 4;
@@ -106,25 +106,25 @@
             this.BlockSizeTxtBox.Size = new System.Drawing.Size(156, 35);
             this.BlockSizeTxtBox.TabIndex = 6;
             // 
-            // Reading
+            // ReadingTimeLb
             // 
-            this.Reading.AutoSize = true;
-            this.Reading.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Reading.Location = new System.Drawing.Point(12, 400);
-            this.Reading.Name = "Reading";
-            this.Reading.Size = new System.Drawing.Size(200, 29);
-            this.Reading.TabIndex = 7;
-            this.Reading.Text = "00.00.00 Reading";
+            this.ReadingTimeLb.AutoSize = true;
+            this.ReadingTimeLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReadingTimeLb.Location = new System.Drawing.Point(12, 400);
+            this.ReadingTimeLb.Name = "ReadingTimeLb";
+            this.ReadingTimeLb.Size = new System.Drawing.Size(200, 29);
+            this.ReadingTimeLb.TabIndex = 7;
+            this.ReadingTimeLb.Text = "00.00.00 Reading";
             // 
-            // label4
+            // AlgTimeLb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(319, 400);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "00.00.00 Alghoritm";
+            this.AlgTimeLb.AutoSize = true;
+            this.AlgTimeLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AlgTimeLb.Location = new System.Drawing.Point(319, 400);
+            this.AlgTimeLb.Name = "AlgTimeLb";
+            this.AlgTimeLb.Size = new System.Drawing.Size(211, 29);
+            this.AlgTimeLb.TabIndex = 8;
+            this.AlgTimeLb.Text = "00.00.00 Alghoritm";
             // 
             // ProgressBarC
             // 
@@ -160,7 +160,7 @@
             this.ErrorLb.AutoSize = true;
             this.ErrorLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ErrorLb.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLb.Location = new System.Drawing.Point(440, 15);
+            this.ErrorLb.Location = new System.Drawing.Point(404, 19);
             this.ErrorLb.Name = "ErrorLb";
             this.ErrorLb.Size = new System.Drawing.Size(0, 25);
             this.ErrorLb.TabIndex = 12;
@@ -189,19 +189,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 587);
+            this.ClientSize = new System.Drawing.Size(808, 587);
             this.Controls.Add(this.PersentLb);
             this.Controls.Add(this.InfoLb);
             this.Controls.Add(this.ErrorLb);
             this.Controls.Add(this.ExecuteBtn);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.ProgressBarC);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Reading);
+            this.Controls.Add(this.AlgTimeLb);
+            this.Controls.Add(this.ReadingTimeLb);
             this.Controls.Add(this.BlockSizeTxtBox);
             this.Controls.Add(this.blockSizeLb);
             this.Controls.Add(this.StatsCheckBox);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.WithoutCdOutCheckB);
             this.Controls.Add(this.displayPathBtn);
             this.Controls.Add(this.CdInFolderBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -219,12 +219,12 @@
 
         private System.Windows.Forms.Button CdInFolderBtn;
         private System.Windows.Forms.Button displayPathBtn;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox WithoutCdOutCheckB;
         private System.Windows.Forms.CheckBox StatsCheckBox;
         private System.Windows.Forms.Label blockSizeLb;
         private System.Windows.Forms.TextBox BlockSizeTxtBox;
-        private System.Windows.Forms.Label Reading;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ReadingTimeLb;
+        private System.Windows.Forms.Label AlgTimeLb;
         private System.Windows.Forms.ProgressBar ProgressBarC;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button ExecuteBtn;
