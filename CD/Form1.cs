@@ -1,7 +1,9 @@
 ﻿using CD.Constans;
 using CD.Service;
 using CD.Services;
+
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -35,32 +37,45 @@ namespace CD
 
         private void ExecuteBtn_Click(object sender, EventArgs e)
         {
+            ErrorLb.Text = string.Empty;
             double average = default;
-
-            string parent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
-
-            bool exists = Directory.Exists(string.Concat(parent, Folder.CD_Out));
-
-            if (!exists)
-            {
-                Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
-            }
-
-            var files = FileReaderWriter.GetFile(Folder.Current, "*.txt");
-
-            int[] arrValues = new FileReaderWriter().Read(files[0]);
 
             try
             {
+
+                string parent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
+
+                bool exists = Directory.Exists(string.Concat(parent, Folder.CD_Out));
+
+                if (!exists)
+                {
+                    Directory.CreateDirectory(string.Concat(parent, Folder.CD_Out));
+                }
+
+                var files = FileReaderWriter.GetFile(Folder.Current, "*.txt");
+
+                int[] arrValues = new FileReaderWriter().Read(files[0]);
+
                 average = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
             }
 
             catch (Exception ex)
             {
-                errorLb.Text = ex.Message;
+                ErrorLb.Text = ex.Message;
             }
 
-            errorLb.Text = average.ToString();
+            if (StatsCheckBox.Checked)
+            {
+                MessageBox.Show("STATISTICA SUKA");
+            }
+
+            if (!StatsCheckBox.Checked)
+            {
+                MessageBox.Show("calculation completed");
+            }
+
+            InfoLb.Text = average.ToString();
+
         }
 
 

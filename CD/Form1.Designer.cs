@@ -31,7 +31,7 @@
             this.CdInFolderBtn = new System.Windows.Forms.Button();
             this.displayPathBtn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.StatsCheckBox = new System.Windows.Forms.CheckBox();
             this.blockSizeLb = new System.Windows.Forms.Label();
             this.BlockSizeTxtBox = new System.Windows.Forms.TextBox();
             this.Reading = new System.Windows.Forms.Label();
@@ -39,8 +39,9 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.ExecuteBtn = new System.Windows.Forms.Button();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.errorLb = new System.Windows.Forms.Label();
+            this.ErrorLb = new System.Windows.Forms.Label();
+            this.InfoLb = new System.Windows.Forms.Label();
+            this.PersentLb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CdInFolderBtn
@@ -76,16 +77,16 @@
             this.checkBox1.Text = "Without folder CD-out";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // StatsCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox2.Location = new System.Drawing.Point(618, 142);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(92, 33);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Stats";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.StatsCheckBox.AutoSize = true;
+            this.StatsCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StatsCheckBox.Location = new System.Drawing.Point(618, 142);
+            this.StatsCheckBox.Name = "StatsCheckBox";
+            this.StatsCheckBox.Size = new System.Drawing.Size(92, 33);
+            this.StatsCheckBox.TabIndex = 3;
+            this.StatsCheckBox.Text = "Stats";
+            this.StatsCheckBox.UseVisualStyleBackColor = true;
             // 
             // blockSizeLb
             // 
@@ -119,7 +120,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(585, 400);
+            this.label4.Location = new System.Drawing.Point(319, 400);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(211, 29);
             this.label4.TabIndex = 8;
@@ -154,22 +155,44 @@
             this.ExecuteBtn.UseVisualStyleBackColor = true;
             this.ExecuteBtn.Click += new System.EventHandler(this.ExecuteBtn_Click);
             // 
-            // errorLb
+            // ErrorLb
             // 
-            this.errorLb.AutoSize = true;
-            this.errorLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.errorLb.ForeColor = System.Drawing.Color.Red;
-            this.errorLb.Location = new System.Drawing.Point(440, 15);
-            this.errorLb.Name = "errorLb";
-            this.errorLb.Size = new System.Drawing.Size(0, 29);
-            this.errorLb.TabIndex = 12;
+            this.ErrorLb.AutoSize = true;
+            this.ErrorLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ErrorLb.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLb.Location = new System.Drawing.Point(440, 15);
+            this.ErrorLb.Name = "ErrorLb";
+            this.ErrorLb.Size = new System.Drawing.Size(0, 25);
+            this.ErrorLb.TabIndex = 12;
+            // 
+            // InfoLb
+            // 
+            this.InfoLb.AutoSize = true;
+            this.InfoLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InfoLb.Location = new System.Drawing.Point(13, 228);
+            this.InfoLb.Name = "InfoLb";
+            this.InfoLb.Size = new System.Drawing.Size(66, 25);
+            this.InfoLb.TabIndex = 13;
+            this.InfoLb.Text = "InfoLb";
+            // 
+            // PersentLb
+            // 
+            this.PersentLb.AutoSize = true;
+            this.PersentLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PersentLb.Location = new System.Drawing.Point(748, 400);
+            this.PersentLb.Name = "PersentLb";
+            this.PersentLb.Size = new System.Drawing.Size(48, 29);
+            this.PersentLb.TabIndex = 14;
+            this.PersentLb.Text = "0%";
             // 
             // CD_Delta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 587);
-            this.Controls.Add(this.errorLb);
+            this.Controls.Add(this.PersentLb);
+            this.Controls.Add(this.InfoLb);
+            this.Controls.Add(this.ErrorLb);
             this.Controls.Add(this.ExecuteBtn);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.progressBar1);
@@ -177,11 +200,13 @@
             this.Controls.Add(this.Reading);
             this.Controls.Add(this.BlockSizeTxtBox);
             this.Controls.Add(this.blockSizeLb);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.StatsCheckBox);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.displayPathBtn);
             this.Controls.Add(this.CdInFolderBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CD_Delta";
             this.Text = "CD-Delta";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -195,7 +220,7 @@
         private System.Windows.Forms.Button CdInFolderBtn;
         private System.Windows.Forms.Button displayPathBtn;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox StatsCheckBox;
         private System.Windows.Forms.Label blockSizeLb;
         private System.Windows.Forms.TextBox BlockSizeTxtBox;
         private System.Windows.Forms.Label Reading;
@@ -203,8 +228,9 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button ExecuteBtn;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Label errorLb;
+        private System.Windows.Forms.Label ErrorLb;
+        private System.Windows.Forms.Label InfoLb;
+        private System.Windows.Forms.Label PersentLb;
     }
 }
 
