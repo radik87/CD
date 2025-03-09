@@ -9,17 +9,6 @@ namespace CD.Service
     {
         Stopwatch stopwatch = new Stopwatch();
 
-        public List<int> GetData(Tuple<int, decimal> delataAverage , int[] input)
-        {
-            List<int> outPut = new List<int>();
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                outPut.Add(i);
-            }
-            return outPut;
-        }
-
         public Dictionary<int, decimal> DeltaAverageByBlockSize(int blockSize, int[] input)
         {
             Dictionary<int, decimal> indexDeltaAveragePair = new Dictionary<int, decimal>();
@@ -38,7 +27,7 @@ namespace CD.Service
                 if(average < minVal)
                 {
                     minVal = average;
-                    minIndex = i;
+                    minIndex = i + 1;
                  }
             }
 

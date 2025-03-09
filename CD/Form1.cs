@@ -81,7 +81,8 @@ namespace CD
                 else
                 {
                     Directory.CreateDirectory(folder.CdOut);
-                    fileReaderWriter.Write(indexDeltaAveragePair, folder.CdOut);
+                    fileReaderWriter.WriteBlockAndAverage(indexDeltaAveragePair, folder.CdOut);
+
                 }
 
                 progress.ProgressChanged += (o, report) =>

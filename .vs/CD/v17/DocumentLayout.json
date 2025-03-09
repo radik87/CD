@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\dev\\CD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\constants\u0026models\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,17 +54,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\dev\\CD\\CD\\Form1.cs",
               "RelativeDocumentMoniker": "CD\\Form1.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Form1.cs",
               "RelativeToolTip": "CD\\Form1.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAMwGcAAAANAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAMwFMAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:13:07.631Z",
               "IsPinned": true,
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\dev\\CD\\CD\\Form1.cs",
               "RelativeDocumentMoniker": "CD\\Form1.cs",
@@ -80,18 +80,17 @@
               "RelativeToolTip": "CD\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:12:30.136Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Alghoritm.cs",
               "DocumentMoniker": "C:\\dev\\CD\\CD\\Services\\Alghoritm.cs",
               "RelativeDocumentMoniker": "CD\\Services\\Alghoritm.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Services\\Alghoritm.cs",
               "RelativeToolTip": "CD\\Services\\Alghoritm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T15:52:59.623Z",
               "IsPinned": true,
@@ -99,13 +98,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "FileReaderWriter.cs",
               "DocumentMoniker": "C:\\dev\\CD\\CD\\Services\\FileReaderWriter.cs",
               "RelativeDocumentMoniker": "CD\\Services\\FileReaderWriter.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Services\\FileReaderWriter.cs",
               "RelativeToolTip": "CD\\Services\\FileReaderWriter.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAlwCQAAABBAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T18:50:08.835Z",
               "IsPinned": true,
@@ -126,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Folder.cs",
               "DocumentMoniker": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Folder.cs",
               "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\Folder.cs",
@@ -134,8 +133,7 @@
               "RelativeToolTip": "CD\\Constants\u0026Models\\Folder.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAgwAcAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T14:01:53.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T14:01:53.61Z"
             },
             {
               "$type": "Document",
@@ -195,8 +193,7 @@
               "RelativeToolTip": "CD\\Form1.Designer.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAAAQwGoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T19:19:22.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T19:19:22.775Z"
             }
           ]
         }
