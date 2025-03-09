@@ -64,7 +64,7 @@ namespace CD
                     {
                         int[] blockValues = fileReaderWriter.Read(filename);
 
-                        deltaAverage = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
+                        deltaAverage = new Alghoritm().DeltaAverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
                     }));
                 }
 
