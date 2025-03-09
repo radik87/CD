@@ -8,7 +8,6 @@ namespace CD.Service
     public class Alghoritm
     {
         Stopwatch stopwatch = new Stopwatch();
-        List<Tuple<int, decimal>> deltaAverage = new List<Tuple<int, decimal>>();
 
         public List<int> GetData(Tuple<int, decimal> delataAverage , int[] input)
         {
@@ -21,8 +20,9 @@ namespace CD.Service
             return outPut;
         }
 
-        public List<Tuple<int, decimal>> DeltaAverageByBlockSize(int blockSize, int[] input)
+        public Tuple<int, decimal> DeltaAverageByBlockSize(int blockSize, int[] input)
         {
+
             int sum = 0;
             decimal average = 0;
             decimal minVal = input[0];
@@ -40,14 +40,12 @@ namespace CD.Service
                     minVal = average;
                     minIndex = i;
                  }
-
-                deltaAverage.Add(new Tuple<int, decimal>(i + 1, Math.Truncate(10 * average) / 10));
             }
 
             stopwatch.Stop();
             TotalTime.Alghoritm = stopwatch.Elapsed;
 
-            return deltaAverage;
+            return new Tuple<int, decimal>(minIndex, Math.Truncate(10 * average) / 10);
         }
 
         private int BitCount(int number)
