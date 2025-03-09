@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\dev\\CD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -67,8 +67,7 @@
               "ViewState": "AQIAADcAAAAAAAAAAIAwwEIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:13:07.631Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "CD\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:12:30.136Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -91,7 +89,7 @@
               "RelativeDocumentMoniker": "CD\\Services\\Alghoritm.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Services\\Alghoritm.cs",
               "RelativeToolTip": "CD\\Services\\Alghoritm.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCEAAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwCcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T15:52:59.623Z",
               "IsPinned": true,
@@ -108,8 +106,7 @@
               "ViewState": "AQIAABUAAAAAAAAAAAAYwBwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T18:50:08.835Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "RelativeToolTip": "CD\\ProgressBar.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:58:11.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T20:58:11.771Z"
             },
             {
               "$type": "Document",
@@ -195,8 +191,7 @@
               "RelativeToolTip": "CD\\Form1.Designer.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAAAQwGoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T19:19:22.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T19:19:22.775Z"
             }
           ]
         }

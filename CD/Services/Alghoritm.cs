@@ -26,6 +26,7 @@ namespace CD.Service
             int sum = 0;
             decimal average = 0;
             decimal minVal = input[0];
+            int minIndex = 0;
             stopwatch.Start();
 
             for (int i = 0; i < blockSize; i++)
@@ -37,7 +38,8 @@ namespace CD.Service
                 if(average < minVal)
                 {
                     minVal = average;
-                }
+                    minIndex = i;
+                 }
 
                 deltaAverage.Add(new Tuple<int, decimal>(i + 1, Math.Truncate(10 * average) / 10));
             }
