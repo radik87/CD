@@ -8,7 +8,6 @@ namespace CD.Service
     public class Alghoritm
     {
         Stopwatch stopwatch = new Stopwatch();
-
         public Dictionary<int, decimal> DeltaAverageByBlockSize(int blockSize, int[] input)
         {
             Dictionary<int, decimal> indexDeltaAveragePair = new Dictionary<int, decimal>();

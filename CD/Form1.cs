@@ -50,7 +50,7 @@ namespace CD
             Folder folder = new Folder();
             Dictionary<int, decimal> indexDeltaAveragePair = new Dictionary<int, decimal>();
             Stats stats = new Stats();
-            
+
             try
             {
                 folder.ParentFormCurrent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
@@ -81,8 +81,16 @@ namespace CD
                 else
                 {
                     Directory.CreateDirectory(folder.CdOut);
-                    fileReaderWriter.WriteBlockAndAverage(indexDeltaAveragePair, folder.CdOut);
+                    
+                    fileReaderWriter.Write(indexDeltaAveragePair, folder.CdOut);
 
+                    foreach (var pair in indexDeltaAveragePair)
+                    {
+                        stats.Delta = pair.Key;
+                        stats.Average = pair.Value;
+                    }
+
+                    //fileReaderWriter.Write(stats.Delta, folder.CdOut);
                 }
 
                 progress.ProgressChanged += (o, report) =>
