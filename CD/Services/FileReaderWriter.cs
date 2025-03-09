@@ -27,25 +27,18 @@ namespace CD.Services
 
             return block;
         }
-
-        public void Write(Dictionary<int, decimal> data, string path)
+        public void Write(Stats stats, int [] blockValues, string path)
         {
             using (StreamWriter writer = new StreamWriter(string.Concat(path, @"\13-out.txt")))
             {
-                foreach (var item in data)
+                writer.WriteLine($"delta: {stats.Delta} ");
+                writer.WriteLine($"average: {stats.Average} ");
+                writer.WriteLine("block data:");
+                for (int i = 0; i < stats.Delta; i++)
                 {
-                    writer.WriteLine($"delta: {item.Key} ");
-                    writer.WriteLine($"average: {item.Value} ");
+                    writer.WriteLine(blockValues[i]);
                 }
             }
         }
-
-        //public void Write(int index, string path)
-        //{
-        //    using (StreamWriter writer = new StreamWriter(string.Concat(path, @"\13-out.txt")))
-        //    {
-               
-        //    }
-        //}
     }
 }
