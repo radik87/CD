@@ -24,7 +24,7 @@ namespace CD.Service
             }
 
             _stopwatch.Stop();
-            TotalTime.Alghoritm += _stopwatch.Elapsed;
+            TotalTime.Alghoritm = _stopwatch.Elapsed;
 
             return average = sum / (double)blockSize;
         }

@@ -25,7 +25,7 @@ namespace CD.Services
             int[] block = Array.ConvertAll(lines, s => int.Parse(s));
 
             _stopwatch.Stop();
-            TotalTime.Reading += _stopwatch.Elapsed;
+            TotalTime.Reading = _stopwatch.Elapsed;
 
             return block;
         }

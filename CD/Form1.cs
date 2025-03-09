@@ -43,18 +43,12 @@ namespace CD
         private async void ExecuteBtn_Click(object sender, EventArgs e)
         {
             ErrorLb.Text = string.Empty;
-            TotalTime.Alghoritm = default;
-            TotalTime.Reading = default;
 
             FileReaderWriter fileReaderWriter = new FileReaderWriter(new Stopwatch());
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
             List<Task> tasks = new List<Task>();
             Folder folder = new Folder();
             Stats stats = new Stats();
-
-
-            //int[] blockValues = Alghoritm.GenerateBigarr();
-            //int test = blockValues.Length;
 
             try
             {
@@ -83,7 +77,7 @@ namespace CD
                         Directory.Delete(folder.CdOut);
                     }
                 }
-                if (!WithoutCdOutCheckBox.Checked)
+                else
                 {
                     Directory.CreateDirectory(folder.CdOut);
                     fileReaderWriter.Write(stats.Average, folder.CdOut);
@@ -107,7 +101,11 @@ namespace CD
 
             if (StatsCheckBox.Checked)
             {
-                MessageBox.Show("STATISTICA SUKA");
+                MessageBox.Show(
+                    "Loaded :" + Environment.NewLine +
+                     "Uploaded :" + Environment.NewLine +
+                     "Delta: "
+                    );
             }
 
             else
