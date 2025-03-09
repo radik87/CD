@@ -1,32 +1,33 @@
 ﻿using CD.Constants_Models;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace CD.Service
 {
     public class Alghoritm
     {
-        private readonly Stopwatch _stopwatch;
-        public Alghoritm(Stopwatch stopwatch)
-        {
-            _stopwatch = stopwatch;
-        }
-        public double AverageByBlockSize(int blockSize, int[] input)
+        Stopwatch stopwatch = new Stopwatch();
+        List<Tuple<int, double>> deltaAverage = new List<Tuple<int, double>>();
+
+        public List<Tuple<int, double>> AverageByBlockSize(int blockSize, int[] input)
         {
             int sum = 0;
             double average = 0;
 
-            _stopwatch.Start();
+            stopwatch.Start();
 
             for (int i = 0; i < blockSize; i++)
             {
                 sum += BitCount(input[i]);
+                average = sum / (double)blockSize;
+                deltaAverage.Add(new Tuple<int, double>(i, average));
             }
 
-            _stopwatch.Stop();
-            TotalTime.Alghoritm = _stopwatch.Elapsed;
+            stopwatch.Stop();
+            TotalTime.Alghoritm = stopwatch.Elapsed;
 
-            return average = sum / (double)blockSize;
+            return deltaAverage;
         }
 
         public static int[] GenerateBigarr()
@@ -59,6 +60,5 @@ namespace CD.Service
 
             return result;
         }
-
     }
 }

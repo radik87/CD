@@ -44,12 +44,13 @@ namespace CD
         {
             ErrorLb.Text = string.Empty;
 
-            FileReaderWriter fileReaderWriter = new FileReaderWriter(new Stopwatch());
+            FileReaderWriter fileReaderWriter = new FileReaderWriter();
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
             List<Task> tasks = new List<Task>();
             Folder folder = new Folder();
+            List<Tuple<int, double>> deltaAverage = new List<Tuple<int, double>>();
             Stats stats = new Stats();
-
+            
             try
             {
                 folder.ParentFormCurrent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
@@ -63,7 +64,7 @@ namespace CD
                     {
                         int[] blockValues = fileReaderWriter.Read(filename);
 
-                        stats.Average = new Alghoritm(new Stopwatch()).AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
+                        deltaAverage = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
                     }));
                 }
 
@@ -80,7 +81,8 @@ namespace CD
                 else
                 {
                     Directory.CreateDirectory(folder.CdOut);
-                    fileReaderWriter.Write(stats.Average, folder.CdOut);
+                    //
+                    fileReaderWriter.Write(deltaAverage, folder.CdOut);
                 }
 
                 progress.ProgressChanged += (o, report) =>
@@ -113,8 +115,8 @@ namespace CD
                 MessageBox.Show("Calculation completed");
             }
 
-
-            InfoLb.Text = stats.Average.ToString();
+            //todo List<Tuple >.Clear();
+            //InfoLb.Text = deltaAverage.ToString();
 
             ReadingTimeLb.Text = string.Concat(nameof(TotalTime.Reading) + ": ", TotalTime.Reading.ToString(TotalTime.Format));
             AlgTimeLb.Text = string.Concat(nameof(TotalTime.Alghoritm) + ": ", TotalTime.Alghoritm.ToString(TotalTime.Format));
