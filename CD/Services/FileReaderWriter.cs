@@ -28,21 +28,15 @@ namespace CD.Services
             return block;
         }
 
-        public void Write(List<Tuple<int, decimal>> data, string path)
+        public void Write(Dictionary<int, decimal> data, string path)
         {
             using (StreamWriter writer = new StreamWriter(string.Concat(path, @"\13-out.txt")))
             {
-                writer.Write($"block size: {data.Count}");
-                writer.WriteLine();
-
-                foreach (Tuple<int, decimal> item in data)
-                {
-                    writer.Write($"delta: {item.Item1} ");
-                    writer.Write($"average: {item.Item2} ");
-                    writer.WriteLine();
+                //writer.Write($"block size: {data.Count}");
+                    writer.WriteLine($"delta: {data.Keys} ");
+                    writer.WriteLine($"average: {data.Values} ");
                 }
                 
             }
         }
     }
-}

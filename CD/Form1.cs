@@ -48,7 +48,7 @@ namespace CD
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
             List<Task> tasks = new List<Task>();
             Folder folder = new Folder();
-            List<Tuple<int, decimal>> deltaAverage = new List<Tuple<int, decimal>>();
+            Dictionary<int, decimal> indexDeltaAveragePair = new Dictionary<int, decimal>();
             Stats stats = new Stats();
             
             try
@@ -64,7 +64,7 @@ namespace CD
                     {
                         int[] blockValues = fileReaderWriter.Read(filename);
 
-                        deltaAverage = new Alghoritm().DeltaAverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
+                        indexDeltaAveragePair = new Alghoritm().DeltaAverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
                     }));
                 }
 
@@ -81,8 +81,7 @@ namespace CD
                 else
                 {
                     Directory.CreateDirectory(folder.CdOut);
-                    //
-                    fileReaderWriter.Write(deltaAverage, folder.CdOut);
+                    fileReaderWriter.Write(indexDeltaAveragePair, folder.CdOut);
                 }
 
                 progress.ProgressChanged += (o, report) =>
@@ -115,8 +114,7 @@ namespace CD
                 MessageBox.Show("Calculation completed");
             }
 
-            //todo List<Tuple >.Clear();
-            //InfoLb.Text = deltaAverage.ToString();
+            InfoLb.Text = indexDeltaAveragePair.Keys.ToString() + indexDeltaAveragePair.Values;
 
             ReadingTimeLb.Text = string.Concat(nameof(TotalTime.Reading) + ": ", TotalTime.Reading.ToString(TotalTime.Format));
             AlgTimeLb.Text = string.Concat(nameof(TotalTime.Alghoritm) + ": ", TotalTime.Alghoritm.ToString(TotalTime.Format));

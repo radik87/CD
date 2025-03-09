@@ -20,9 +20,9 @@ namespace CD.Service
             return outPut;
         }
 
-        public Tuple<int, decimal> DeltaAverageByBlockSize(int blockSize, int[] input)
+        public Dictionary<int, decimal> DeltaAverageByBlockSize(int blockSize, int[] input)
         {
-
+            Dictionary<int, decimal> indexDeltaAveragePair = new Dictionary<int, decimal>();
             int sum = 0;
             decimal average = 0;
             decimal minVal = input[0];
@@ -45,7 +45,8 @@ namespace CD.Service
             stopwatch.Stop();
             TotalTime.Alghoritm = stopwatch.Elapsed;
 
-            return new Tuple<int, decimal>(minIndex, Math.Truncate(10 * average) / 10);
+            indexDeltaAveragePair.Add(minIndex, Math.Truncate(10 * minVal) / 10);
+            return indexDeltaAveragePair;
         }
 
         private int BitCount(int number)
