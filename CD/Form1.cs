@@ -51,6 +51,7 @@ namespace CD
             Dictionary<int, decimal> indexDeltaAveragePair = new Dictionary<int, decimal>();
             Stats stats = new Stats();
             int[] blockValues = new int[] { };
+
             try
             {
                 folder.ParentFormCurrent = Path.GetFullPath(Path.Combine(Folder.Current, @"..\"));
@@ -120,8 +121,6 @@ namespace CD
             {
                 MessageBox.Show("Calculation completed");
             }
-
-            InfoLb.Text = indexDeltaAveragePair.Keys.ToString() + indexDeltaAveragePair.Values;
 
             ReadingTimeLb.Text = string.Concat(nameof(TotalTime.Reading) + ": ", TotalTime.Reading.ToString(TotalTime.Format));
             AlgTimeLb.Text = string.Concat(nameof(TotalTime.Alghoritm) + ": ", TotalTime.Alghoritm.ToString(TotalTime.Format));

@@ -4,9 +4,9 @@ using System;
 
 namespace CD
 {
-    internal class ProgressBar
+    public class ProgressBar
     {
-        internal Task ProgresData(List<string> list, IProgress<ProgressReport> progress)
+        public Task ProgresData(List<string> list, IProgress<ProgressReport> progress)
         {
             int index = 1;
             int totalProgress = list.Count;

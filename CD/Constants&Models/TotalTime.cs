@@ -2,11 +2,11 @@
 
 namespace CD.Constants_Models
 {
-    public class TotalTime
+    internal class TotalTime
     {
-        public static TimeSpan Reading{ get; set; }
-        public static TimeSpan Alghoritm { get; set; }
+        internal static TimeSpan Reading{ get; set; }
+        internal static TimeSpan Alghoritm { get; set; }
 
-        public const string Format = "mm\\:ss\\:fffff";
+        internal const string Format = "mm\\:ss\\:fffff";
     }
 }
