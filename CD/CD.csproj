@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants&amp;Models\Folder.cs" />
+    <Compile Include="Constants&amp;Models\Stats.cs" />
     <Compile Include="Constants&amp;Models\TotalTime.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

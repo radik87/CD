@@ -1,7 +1,7 @@
 ﻿namespace CD
 {
-    internal class ProgressReport
+    public class ProgressReport
     {
-        internal int PercentCompelete { get; set; }
+        public int PercentCompelete { get; set; }
     }
 }

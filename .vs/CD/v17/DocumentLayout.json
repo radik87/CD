@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\constants\u0026models\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\constants\u0026models\\totaltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\totaltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\constants\u0026models\\progressreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\progressreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\constants\u0026models\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\alghoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\constants\u0026models\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +37,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\constants\u0026models\\progressreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\constants\u0026models\\progressreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -60,7 +64,7 @@
               "RelativeDocumentMoniker": "CD\\Form1.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Form1.cs",
               "RelativeToolTip": "CD\\Form1.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAowFoAAAAUAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAwDgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:13:07.631Z",
               "IsPinned": true,
@@ -76,7 +80,8 @@
               "RelativeToolTip": "CD\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:12:30.136Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -86,7 +91,7 @@
               "RelativeDocumentMoniker": "CD\\Services\\FileReaderWriter.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Services\\FileReaderWriter.cs",
               "RelativeToolTip": "CD\\Services\\FileReaderWriter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T18:50:08.835Z",
               "IsPinned": true,
@@ -100,7 +105,7 @@
               "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\TotalTime.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Constants\u0026Models\\TotalTime.cs",
               "RelativeToolTip": "CD\\Constants\u0026Models\\TotalTime.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T14:08:26.764Z",
               "IsPinned": true,
@@ -108,64 +113,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProgressReport.cs",
-              "DocumentMoniker": "C:\\dev\\CD\\CD\\Constants\u0026Models\\ProgressReport.cs",
-              "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\ProgressReport.cs",
-              "ToolTip": "C:\\dev\\CD\\CD\\Constants\u0026Models\\ProgressReport.cs",
-              "RelativeToolTip": "CD\\Constants\u0026Models\\ProgressReport.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:59:39.765Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Folder.cs",
-              "DocumentMoniker": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Folder.cs",
-              "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\Folder.cs",
-              "ToolTip": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Folder.cs",
-              "RelativeToolTip": "CD\\Constants\u0026Models\\Folder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAgwAcAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T14:01:53.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\dev\\CD\\CD\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "CD\\Form1.Designer.cs",
-              "ToolTip": "C:\\dev\\CD\\CD\\Form1.Designer.cs",
-              "RelativeToolTip": "CD\\Form1.Designer.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAQwGoAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T19:19:22.775Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Alghoritm.cs",
               "DocumentMoniker": "C:\\dev\\CD\\CD\\Services\\Alghoritm.cs",
               "RelativeDocumentMoniker": "CD\\Services\\Alghoritm.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Services\\Alghoritm.cs",
               "RelativeToolTip": "CD\\Services\\Alghoritm.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAJAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T15:52:59.623Z"
+              "WhenOpened": "2025-03-07T15:52:59.623Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProgressBar.cs",
-              "DocumentMoniker": "C:\\dev\\CD\\CD\\ProgressBar.cs",
-              "RelativeDocumentMoniker": "CD\\ProgressBar.cs",
-              "ToolTip": "C:\\dev\\CD\\CD\\ProgressBar.cs",
-              "RelativeToolTip": "CD\\ProgressBar.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "Stats.cs",
+              "DocumentMoniker": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Stats.cs",
+              "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\Stats.cs",
+              "ToolTip": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Stats.cs",
+              "RelativeToolTip": "CD\\Constants\u0026Models\\Stats.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:58:11.771Z"
+              "WhenOpened": "2025-03-08T22:18:13.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -177,7 +147,60 @@
               "RelativeToolTip": "CD\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T21:09:48.416Z"
+              "WhenOpened": "2025-03-08T21:09:48.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProgressBar.cs",
+              "DocumentMoniker": "C:\\dev\\CD\\CD\\ProgressBar.cs",
+              "RelativeDocumentMoniker": "CD\\ProgressBar.cs",
+              "ToolTip": "C:\\dev\\CD\\CD\\ProgressBar.cs",
+              "RelativeToolTip": "CD\\ProgressBar.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwBQAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T20:58:11.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Folder.cs",
+              "DocumentMoniker": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Folder.cs",
+              "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\Folder.cs",
+              "ToolTip": "C:\\dev\\CD\\CD\\Constants\u0026Models\\Folder.cs",
+              "RelativeToolTip": "CD\\Constants\u0026Models\\Folder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAgwAcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T14:01:53.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProgressReport.cs",
+              "DocumentMoniker": "C:\\dev\\CD\\CD\\Constants\u0026Models\\ProgressReport.cs",
+              "RelativeDocumentMoniker": "CD\\Constants\u0026Models\\ProgressReport.cs",
+              "ToolTip": "C:\\dev\\CD\\CD\\Constants\u0026Models\\ProgressReport.cs",
+              "RelativeToolTip": "CD\\Constants\u0026Models\\ProgressReport.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T20:59:39.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\dev\\CD\\CD\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "CD\\Form1.Designer.cs",
+              "ToolTip": "C:\\dev\\CD\\CD\\Form1.Designer.cs",
+              "RelativeToolTip": "CD\\Form1.Designer.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAQwGoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T19:19:22.775Z",
+              "EditorCaption": ""
             }
           ]
         }

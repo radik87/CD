@@ -19,7 +19,6 @@ namespace CD
                 {
                     progressReport.PercentCompelete = index++ * 100 / totalProgress;
                     progress.Report(progressReport);
-                    Thread.Sleep(100);
                 }
             });
         }

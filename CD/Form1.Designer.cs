@@ -30,7 +30,7 @@
         {
             this.CdInFolderBtn = new System.Windows.Forms.Button();
             this.displayPathBtn = new System.Windows.Forms.Button();
-            this.WithoutCdOutCheckB = new System.Windows.Forms.CheckBox();
+            this.WithoutCdOutCheckBox = new System.Windows.Forms.CheckBox();
             this.StatsCheckBox = new System.Windows.Forms.CheckBox();
             this.blockSizeLb = new System.Windows.Forms.Label();
             this.BlockSizeTxtBox = new System.Windows.Forms.TextBox();
@@ -66,16 +66,16 @@
             this.displayPathBtn.UseVisualStyleBackColor = true;
             this.displayPathBtn.Click += new System.EventHandler(this.DisplayPathBtn_Click);
             // 
-            // WithoutCdOutCheckB
+            // WithoutCdOutCheckBox
             // 
-            this.WithoutCdOutCheckB.AutoSize = true;
-            this.WithoutCdOutCheckB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.WithoutCdOutCheckB.Location = new System.Drawing.Point(17, 142);
-            this.WithoutCdOutCheckB.Name = "WithoutCdOutCheckB";
-            this.WithoutCdOutCheckB.Size = new System.Drawing.Size(268, 33);
-            this.WithoutCdOutCheckB.TabIndex = 2;
-            this.WithoutCdOutCheckB.Text = "Without folder CD-out";
-            this.WithoutCdOutCheckB.UseVisualStyleBackColor = true;
+            this.WithoutCdOutCheckBox.AutoSize = true;
+            this.WithoutCdOutCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WithoutCdOutCheckBox.Location = new System.Drawing.Point(17, 142);
+            this.WithoutCdOutCheckBox.Name = "WithoutCdOutCheckBox";
+            this.WithoutCdOutCheckBox.Size = new System.Drawing.Size(268, 33);
+            this.WithoutCdOutCheckBox.TabIndex = 2;
+            this.WithoutCdOutCheckBox.Text = "Without folder CD-out";
+            this.WithoutCdOutCheckBox.UseVisualStyleBackColor = true;
             // 
             // StatsCheckBox
             // 
@@ -201,7 +201,7 @@
             this.Controls.Add(this.BlockSizeTxtBox);
             this.Controls.Add(this.blockSizeLb);
             this.Controls.Add(this.StatsCheckBox);
-            this.Controls.Add(this.WithoutCdOutCheckB);
+            this.Controls.Add(this.WithoutCdOutCheckBox);
             this.Controls.Add(this.displayPathBtn);
             this.Controls.Add(this.CdInFolderBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -219,7 +219,7 @@
 
         private System.Windows.Forms.Button CdInFolderBtn;
         private System.Windows.Forms.Button displayPathBtn;
-        private System.Windows.Forms.CheckBox WithoutCdOutCheckB;
+        private System.Windows.Forms.CheckBox WithoutCdOutCheckBox;
         private System.Windows.Forms.CheckBox StatsCheckBox;
         private System.Windows.Forms.Label blockSizeLb;
         private System.Windows.Forms.TextBox BlockSizeTxtBox;

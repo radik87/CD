@@ -2,6 +2,7 @@
 using CD.Constants_Models;
 using CD.Service;
 using CD.Services;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,14 +43,18 @@ namespace CD
         private async void ExecuteBtn_Click(object sender, EventArgs e)
         {
             ErrorLb.Text = string.Empty;
-            double average = default;
+            TotalTime.Alghoritm = default;
+            TotalTime.Reading = default;
 
-            FileReaderWriter fileReaderWriter = new FileReaderWriter();
+            FileReaderWriter fileReaderWriter = new FileReaderWriter(new Stopwatch());
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
             List<Task> tasks = new List<Task>();
             Folder folder = new Folder();
-            Stopwatch readingTime = new Stopwatch();
-            Stopwatch algTime = new Stopwatch();
+            Stats stats = new Stats();
+
+
+            //int[] blockValues = Alghoritm.GenerateBigarr();
+            //int test = blockValues.Length;
 
             try
             {
@@ -60,18 +65,17 @@ namespace CD
 
                 foreach (string filename in filesNames)
                 {
-                    readingTime.Start();
-                    int[] arrValues = fileReaderWriter.Read(filename);
-                    readingTime.Stop();
-                    TotalTime.Reading += readingTime.Elapsed;
+                    tasks.Add(Task.Run(() =>
+                    {
+                        int[] blockValues = fileReaderWriter.Read(filename);
 
-                    algTime.Start();
-                    average = new Alghoritm().AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), arrValues);
-                    algTime.Stop();
-                    TotalTime.Alghoritm += algTime.Elapsed;
+                        stats.Average = new Alghoritm(new Stopwatch()).AverageByBlockSize(Convert.ToInt32(BlockSizeTxtBox.Text), blockValues);
+                    }));
                 }
 
-                if (WithoutCdOutCheckB.Checked)
+                await Task.WhenAll(tasks);
+
+                if (WithoutCdOutCheckBox.Checked)
                 {
                     if (Directory.Exists(folder.CdOut))
                     {
@@ -79,10 +83,10 @@ namespace CD
                         Directory.Delete(folder.CdOut);
                     }
                 }
-                else
+                if (!WithoutCdOutCheckBox.Checked)
                 {
                     Directory.CreateDirectory(folder.CdOut);
-                    fileReaderWriter.Write(average, folder.CdOut);
+                    fileReaderWriter.Write(stats.Average, folder.CdOut);
                 }
 
                 progress.ProgressChanged += (o, report) =>
@@ -100,6 +104,7 @@ namespace CD
                 ErrorLb.Text = ex.Message;
             }
 
+
             if (StatsCheckBox.Checked)
             {
                 MessageBox.Show("STATISTICA SUKA");
@@ -110,10 +115,12 @@ namespace CD
                 MessageBox.Show("Calculation completed");
             }
 
-            InfoLb.Text = average.ToString();
 
-            ReadingTimeLb.Text = string.Concat(nameof(TotalTime.Reading )+ ": ", TotalTime.Reading.ToString(TotalTime.Format));
+            InfoLb.Text = stats.Average.ToString();
+
+            ReadingTimeLb.Text = string.Concat(nameof(TotalTime.Reading) + ": ", TotalTime.Reading.ToString(TotalTime.Format));
             AlgTimeLb.Text = string.Concat(nameof(TotalTime.Alghoritm) + ": ", TotalTime.Alghoritm.ToString(TotalTime.Format));
+
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
