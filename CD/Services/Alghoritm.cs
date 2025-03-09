@@ -8,20 +8,20 @@ namespace CD.Service
     public class Alghoritm
     {
         Stopwatch stopwatch = new Stopwatch();
-        List<Tuple<int, double>> deltaAverage = new List<Tuple<int, double>>();
+        List<Tuple<int, decimal>> deltaAverage = new List<Tuple<int, decimal>>();
 
-        public List<Tuple<int, double>> AverageByBlockSize(int blockSize, int[] input)
+        public List<Tuple<int, decimal>> AverageByBlockSize(int blockSize, int[] input)
         {
             int sum = 0;
-            double average = 0;
+            decimal average = 0;
 
             stopwatch.Start();
 
             for (int i = 0; i < blockSize; i++)
             {
                 sum += BitCount(input[i]);
-                average = sum / (double)blockSize;
-                deltaAverage.Add(new Tuple<int, double>(i, average));
+                average = sum / (decimal)(i + 1);
+                deltaAverage.Add(new Tuple<int, decimal>(i + 1, Math.Round(average, 1)));
             }
 
             stopwatch.Stop();

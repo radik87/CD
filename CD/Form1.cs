@@ -48,7 +48,7 @@ namespace CD
             Progress<ProgressReport> progress = new Progress<ProgressReport>();
             List<Task> tasks = new List<Task>();
             Folder folder = new Folder();
-            List<Tuple<int, double>> deltaAverage = new List<Tuple<int, double>>();
+            List<Tuple<int, decimal>> deltaAverage = new List<Tuple<int, decimal>>();
             Stats stats = new Stats();
             
             try
