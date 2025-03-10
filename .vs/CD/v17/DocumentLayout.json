@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\dev\\CD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\services\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,7 +39,7 @@
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|c:\\dev\\cd\\cd\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|C:\\dev\\CD\\cd\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95A294C8-D235-4D18-8FAA-E0F6F66F4308}|CD\\CD.csproj|solutionrelative:cd\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -74,8 +74,7 @@
               "ViewState": "AQIAAIMAAAAAAAAAAAAYwFIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:13:07.631Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "CD\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:12:30.136Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T15:52:59.623Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -112,7 +109,7 @@
               "RelativeDocumentMoniker": "CD\\Services\\FileReaderWriter.cs",
               "ToolTip": "C:\\dev\\CD\\CD\\Services\\FileReaderWriter.cs",
               "RelativeToolTip": "CD\\Services\\FileReaderWriter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T18:50:08.835Z",
               "IsPinned": true,
@@ -129,8 +126,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T14:08:26.764Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -142,8 +138,7 @@
               "RelativeToolTip": "CD\\Constants\u0026Models\\Stats.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T22:18:13.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T22:18:13.641Z"
             },
             {
               "$type": "Document",
@@ -155,8 +150,7 @@
               "RelativeToolTip": "CD\\Constants\u0026Models\\ProgressReport.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:59:39.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T20:59:39.765Z"
             },
             {
               "$type": "Document",
@@ -168,8 +162,7 @@
               "RelativeToolTip": "CD\\Program.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T21:09:48.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T21:09:48.416Z"
             },
             {
               "$type": "Document",
@@ -181,8 +174,7 @@
               "RelativeToolTip": "CD\\ProgressBar.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:58:11.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T20:58:11.771Z"
             },
             {
               "$type": "Document",
@@ -194,8 +186,7 @@
               "RelativeToolTip": "CD\\Constants\u0026Models\\Folder.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T14:01:53.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T14:01:53.61Z"
             },
             {
               "$type": "Document",
@@ -207,8 +198,7 @@
               "RelativeToolTip": "CD\\Form1.Designer.cs",
               "ViewState": "AQIAAIYAAAAAAAAAAAAMwI8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T19:19:22.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T19:19:22.775Z"
             },
             {
               "$type": "Document",

@@ -1,0 +1,10 @@
+C:\dev\CD\CD\bin\Release\CD.exe.config
+C:\dev\CD\CD\bin\Release\CD.exe
+C:\dev\CD\CD\bin\Release\CD.pdb
+C:\dev\CD\CD\obj\Release\CD.csproj.AssemblyReference.cache
+C:\dev\CD\CD\obj\Release\CD.CD_Delta.resources
+C:\dev\CD\CD\obj\Release\CD.Properties.Resources.resources
+C:\dev\CD\CD\obj\Release\CD.csproj.GenerateResource.cache
+C:\dev\CD\CD\obj\Release\CD.csproj.CoreCompileInputs.cache
+C:\dev\CD\CD\obj\Release\CD.exe
+C:\dev\CD\CD\obj\Release\CD.pdb
